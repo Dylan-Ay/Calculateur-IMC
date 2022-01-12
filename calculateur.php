@@ -6,6 +6,7 @@
 	$conversionHeight = $height * 0.01;
 	$resultIMC = '';
 	$infoIMC = '';
+	$messageInfo = '';
 	$error = '';
 	$idealWeightMen = '';
 	$idealWeightWomen = '';
@@ -35,22 +36,28 @@
 			$infoIMC = "";
 			break;
 		case $resultIMC < 18.5 :
-			$infoIMC = "<span class='lightblue-bold'>Vous êtes dans la catégorie Maigreur, vous devriez manger davantage.</span>";
+			$infoIMC = '<span>Vous êtes dans la catégorie Maigreur.</span>';
+			$messageInfo = '<p class="semi-bold">Ces indices ne remplacent ni un avis médical, ni votre appréciation personnelle puisque l’essentiel est avant tout de se sentir en forme et bien dans sa peau &#x1F600.</span> </p>';
 			break;
 		case $resultIMC < 24.9 :
-			$infoIMC = "<span class='blue'>Vous êtes dans la catégorie Normal, tout va bien pour vous.</span>";
+			$infoIMC = "<span>Vous êtes dans la catégorie Normal.</span>";
+			$messageInfo = '<p class="semi-bold">Ces indices ne remplacent ni un avis médical, ni votre appréciation personnelle puisque l’essentiel est avant tout de se sentir en forme et bien dans sa peau &#x1F600.</span> </p>';
 			break;
 		case $resultIMC < 29.9 :
-			$infoIMC = "<span class='yellow'>Vous êtes dans la catégorie Surpoids vous devriez faire un régime.</span>";
+			$infoIMC = "<span>Vous êtes dans la catégorie Surpoids.</span>";
+			$messageInfo = '<p class="semi-bold">Ces indices ne remplacent ni un avis médical, ni votre appréciation personnelle puisque l’essentiel est avant tout de se sentir en forme et bien dans sa peau &#x1F600.</span> </p>';
 			break;
 		case $resultIMC < 34.9 :
-			$infoIMC = "<span class='yellow'>Vous êtes dans la catégorie 1 Obésité Modérée vous devriez faire un régime.</span>";
+			$infoIMC = "<span>Vous êtes dans la catégorie 1 Obésité Modérée.</span>";
+			$messageInfo = '<p class="semi-bold">Ces indices ne remplacent ni un avis médical, ni votre appréciation personnelle puisque l’essentiel est avant tout de se sentir en forme et bien dans sa peau &#x1F600.</span> </p>';
 			break;
 		case $resultIMC < 39.9 :
-			$infoIMC = "<span class='orange-bold'>Vous êtes dans la catégorie 2 Obésité Sévère vous devriez faire un régime.</span>";
+			$infoIMC = "<span>Vous êtes dans la catégorie 2 Obésité Sévère.</span>";
+			$messageInfo = '<p class="semi-bold">Ces indices ne remplacent ni un avis médical, ni votre appréciation personnelle puisque l’essentiel est avant tout de se sentir en forme et bien dans sa peau &#x1F600.</span> </p>';
 			break;
 		case $resultIMC >= 40 : 
-			$infoIMC = "<span class='orange-bold'>Vous êtes dans la catégorie 3 Obésité Morbide vous devriez voir un médecin.</span>";
+			$infoIMC = "<span>Vous êtes dans la catégorie 3 Obésité Morbide.</span>";
+			$messageInfo = '<p class="semi-bold">Ces indices ne remplacent ni un avis médical, ni votre appréciation personnelle puisque l’essentiel est avant tout de se sentir en forme et bien dans sa peau &#x1F600.</span> </p>';
 			break;
 	}
 ?>

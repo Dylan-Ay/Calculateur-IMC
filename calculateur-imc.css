@@ -25,7 +25,7 @@ body{
     font-family: "Poppins", sans-serif;
 }
 main{
-    margin-bottom: 7%;
+    margin-bottom: 0%;
 }
 #color-top{
     background-color: #752020;
@@ -89,4 +89,10 @@ input[type='radio'] {
 .error{
     color: red;
     font-weight: 600;
+}
+.mt-form{
+    margin-top: 35px;
+}
+.semi-bold{
+    font-weight: 500;
 }

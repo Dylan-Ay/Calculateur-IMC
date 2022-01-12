@@ -1,4 +1,4 @@
-<?php include_once('form.php')?>
+<?php include_once('calculateur.php')?>
 <!DOCTYPE html>
 <html lang="fr-FR">
 	<head>
@@ -22,21 +22,21 @@
         <main>
             <div class="container pt-4 pb-5">
                 <h1 class="text-center pt-4 pb-5">Calculateur d'IMC et de poids idéal</h1>
-                <div class="row mt-4 d-flex justify-content-between">
+                <div class="row mt-4 d-flex justify-content-between pb-5">
                     <div class="col-12 col-lg-5 mb-4">
                         <h2 class="text-center">Qu'est ce que l'IMC ?</h2>
                             <p class="mt-4">L’indice de masse corporelle ou IMC est une grandeur qui permet d'estimer la corpulence d’une personne.</p>
-
                             <p>Il se calcule en fonction de la taille et de la masse corporelle grâce au calcul : poids(kg) / taille(m)².</p>
+                            <p>Le poids idéal est calculé avec la formule de Lorentz, qui tient compte de la différence de genre. </p>
                             <img src="images/illustration-imc.svg" alt="illustration imc" class="mt-3">
                     </div>
                      <!------------  Form ----------->
                     <div class="col-12 col-lg-7 col-xl-6 text-center pt-4 pt-xxl-5">
                         <div class="form-window mx-auto d-flex justify-content-center py-5 mt-3">
                             <div class="col-12 col-xxl-9">
-                                <div id="result text-end">
+                                <div class="result px-3 px-xl-0">
                                     <p><?php echo $resultIdealWeight?> <?php if(!empty($resultIMC)){ echo "et votre IMC est ".$resultIMC;}?></p>
-                                    <p><?php  if(!empty($infoIMC)){ echo $infoIMC;} ?></p>
+                                    <p class="mb-0"><?php  if(!empty($infoIMC)){ echo $infoIMC;} ?></p>
                                 </div>
                                 <form name="form-imc" method="post" action="index.php" class="mt-5 px-3">
                                             <div class="row">
@@ -53,11 +53,9 @@
                                     <p class="py-1">
                                         <input type="text" name="weight" placeholder="Votre poids (en kg)*" class="input-txt ps-3 no-arrow" value= "<?php echo isset($_POST['weight']) ? htmlspecialchars($_POST['weight'], ENT_QUOTES) : ''; ?>">
                                     </p>
-                                    <p class="py-1">
-                                        <input type="number" name="age" placeholder="Votre age" class="input-txt ps-3 no-arrow" value= "<?php echo isset($_POST['age']) ? htmlspecialchars($_POST['age'], ENT_QUOTES) : ''; ?>">
-                                    </p>
                                     <p><?php echo $error; ?></p>
                                     <input type="submit" value="Valider" class="button-submit px-5 py-2 mt-3">
+                                    <p><?php echo $messageInfo; ?></p>
                                 </form>
                             </div>
                         </div>
