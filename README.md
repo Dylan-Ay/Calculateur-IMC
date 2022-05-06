@@ -8,7 +8,7 @@ Thanks for checking out this front-end personal project.
 
 ## The Project
 
-It's a PHP/HTML/CSS project. 
+It's my first PHP app made with HTML/CSS.
 
 The functionalities are :
 - Calculate the IBM according to the gender, the height and the weight
@@ -18,6 +18,6 @@ Stacks used :
 - HTML5
 - CSS3
 - Bootstrap
-- Adobe XD
+- Adobe XD (Mockup)
 
 **Don't hesitate to contact me for further informations!** 🚀
